@@ -8,7 +8,7 @@ def type_date_with_underscores():
     formatted_date = datetime.now().strftime('_%Y_%m_%d')
     
     # Wait for a short period to switch to the target application
-    time.sleep(.1)  # Adjust this delay as needed
+    time.sleep(.001)  # Adjust this delay as needed
 
     # Type out the date string where the cursor is located
     pyautogui.typewrite(formatted_date)
