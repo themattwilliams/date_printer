@@ -1,13 +1,12 @@
-```
-# Date Typer Script
+# Date Printer Script
 
-This Python script allows for automatic typing of today's date in the format `YYYY_MM_DD` (e.g., `2024_02_06`), making it perfect for appending dates to file names, note titles, or any other naming convention that requires a standardized date format. By utilizing `pyautogui`, the script simulates keyboard input to type the date string into any active application after a brief delay, facilitating seamless integration into your workflow.
+This Python script facilitates the automatic typing of today's date prefixed with an underscore and formatted as `YYYY_MM_DD` (e.g., `_2024_02_06`). It's designed to seamlessly integrate into workflows requiring dates to be appended to file names, note titles, or any other naming conventions that benefit from a standardized date format. Utilizing `pyautogui`, the script simulates keyboard input, typing the date string into any active application with a minimal delay, making it ideal for quick file renaming or note-taking.
 
 ## Features
 
-- **Automatic Date Formatting:** Outputs the date in `YYYY_MM_DD` format.
-- **Customizable Delay:** Adjust the delay to switch to the target application before typing.
-- **Global Shortcut Execution:** Instructions included for setting up a Windows shortcut to run the script with a key combination.
+- **Prefixed Date Formatting:** Automatically outputs the date in `_YYYY_MM_DD` format, ideal for appending to existing file names or titles.
+- **Minimal Delay:** Set to 0.01 seconds to quickly switch to the target application and type the date.
+- **Ease of Use:** Can be run using a Windows shortcut with a custom key combination for fast access.
 
 ## Prerequisites
 
@@ -18,7 +17,7 @@ This Python script allows for automatic typing of today's date in the format `YY
 
 1. **Clone the Repository:**
    ```
-   git clone https://github.com/yourusername/date-typer-script.git
+   git clone https://github.com/yourusername/date_printer.git
    ```
 2. **Install `pyautogui`:**
    ```
@@ -27,29 +26,29 @@ This Python script allows for automatic typing of today's date in the format `YY
 
 ## Usage
 
-1. Save the `type_date.py` script to a preferred location on your computer.
-2. Create a shortcut on Windows to run the script:
+1. Save the `date_printer.py` script to a preferred location on your computer.
+2. Adjust the script to set the desired delay (already set to 0.01 seconds for immediate action) and ensure the date format includes the leading underscore.
+3. Create a shortcut on Windows to run the script:
     - Right-click on the desktop or in a folder and choose `New` > `Shortcut`.
     - Set the location to your Python executable followed by the script path. Example:
       ```
-      C:\path\to\python.exe C:\path\to\type_date.py
+      C:\path\to\python.exe C:\path\to\date_printer.py
       ```
     - Complete the shortcut wizard.
-3. Assign a shortcut key via the shortcut properties:
+4. Assign a shortcut key via the shortcut properties:
     - Right-click the shortcut, select `Properties`, then the `Shortcut` tab.
     - Click in the `Shortcut key` box and press your desired key combination.
     - Click `OK` to save your settings.
-4. Press the assigned shortcut key, switch to the target application within the delay period, and the script will type today's date.
+5. When you press the assigned shortcut key, the script will immediately activate, allowing you to switch to the target application where the script will type today's date.
 
 ## Customization
 
-To adjust the delay before the script types the date, edit the `time.sleep(5)` line in `type_date.py`, replacing `5` with your preferred delay in seconds.
+The script includes a predefined delay of 0.01 seconds before typing the date, designed for almost instantaneous action. This delay can be adjusted by editing the `time.sleep(0.01)` line in `date_printer.py`, though for most use cases, the default setting should suffice.
 
 ## Contributing
 
-Contributions to enhance the script or its documentation are welcome! Please feel free to submit pull requests or open issues to discuss potential improvements.
+Contributions to improve the script or its documentation are warmly welcomed! Feel free to submit pull requests or open issues to suggest enhancements.
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-```
