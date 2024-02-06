@@ -17,29 +17,35 @@ This Python script facilitates the automatic typing of today's date prefixed wit
 
 1. **Clone the Repository:**
    ```
-   git clone https://github.com/yourusername/date_printer.git
+   git clone https://github.com/themattwilliams/date_printer.git
    ```
 2. **Install `pyautogui`:**
    ```
    pip install pyautogui
    ```
 
+## Convert Script to Executable
+
+To convert the `date_printer.py` script into an executable file for easier distribution and usage, follow these steps:
+
+1. **Install PyInstaller:**
+   ```
+   python.exe -m pip install pyinstaller
+   ```
+
+2. **Navigate to Your Script's Directory:**
+   Ensure you're in the directory containing your `date_printer.py` script.
+
+3. **Create the Executable:**
+   Use Python to call PyInstaller, specifying the `--onefile` and `--noconsole` options to create a single executable without a console window:
+   ```
+   python.exe -m PyInstaller --onefile --noconsole .\date_printer.py
+   ```
+   This command generates the executable in the `dist` directory within your script's folder.
+
 ## Usage
 
-1. Save the `date_printer.py` script to a preferred location on your computer.
-2. Adjust the script to set the desired delay (already set to 0.01 seconds for immediate action) and ensure the date format includes the leading underscore.
-3. Create a shortcut on Windows to run the script:
-    - Right-click on the desktop or in a folder and choose `New` > `Shortcut`.
-    - Set the location to your Python executable followed by the script path. Example:
-      ```
-      C:\path\to\python.exe C:\path\to\date_printer.py
-      ```
-    - Complete the shortcut wizard.
-4. Assign a shortcut key via the shortcut properties:
-    - Right-click the shortcut, select `Properties`, then the `Shortcut` tab.
-    - Click in the `Shortcut key` box and press your desired key combination.
-    - Click `OK` to save your settings.
-5. When you press the assigned shortcut key, the script will immediately activate, allowing you to switch to the target application where the script will type today's date.
+After converting `date_printer.py` to an executable, you can run it directly without needing to open Python or a terminal. Simply double-click the executable or assign it to a shortcut with a custom key combination for quick access.
 
 ## Customization
 
